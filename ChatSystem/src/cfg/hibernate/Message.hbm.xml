@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-1-13 17:33:44 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.Message" table="Message" catalog="javaChat">
+        <id name="messageId" type="java.lang.Integer">
+            <column name="MessageId" />
+            <generator class="identity" />
+        </id>
+        <property name="fromUser" type="string">
+            <column name="FromUser" length="100" />
+        </property>
+        <property name="toUser" type="string">
+            <column name="ToUser" length="100" />
+        </property>
+        <property name="content" type="string">
+            <column name="Content" length="1000" />
+        </property>
+        <property name="sendTime" type="timestamp">
+            <column name="SendTime" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

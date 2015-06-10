@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015-1-9 20:17:27 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="model.User" table="User" catalog="javaChat">
+        <id name="userId" type="string">
+            <column name="UserId" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="userPwd" type="string">
+            <column name="UserPWD" length="100" />
+        </property>
+        <property name="isOnline" type="java.lang.Boolean">
+            <column name="IsOnline" />
+        </property>
+        <property name="registerDate" type="timestamp">
+            <column name="RegisterDate" length="19" />
+        </property>
+        <property name="recentLoginIp" type="string">
+            <column name="RecentLoginIp" length="100" />
+        </property>
+        <property name="recentLoginPort" type="java.lang.Integer">
+            <column name="RecentLoginPort" />
+        </property>
+        <property name="recentLogoutDate" type="timestamp">
+            <column name="RecentLogoutDate" length="19" />
+        </property>
+        <property name="hasNewMessage" type="java.lang.Boolean">
+            <column name="HasNewMessage" />
+        </property>
+    </class>
+</hibernate-mapping>
